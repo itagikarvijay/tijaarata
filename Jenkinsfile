@@ -34,8 +34,16 @@ pipeline {
         stage('Deploy') {
 			steps {
           		echo 'Deploying...!!!'
-          		deploy adapters: [tomcat9(credentialsId: 'tomcatUPWD', path: '', url: 'http://localhost:9090')], contextPath: '/', onFailure: false, war: '**/*.war'
+          		
           	}
         }
     }
+    post { 
+        success {
+            echo 'I will always deploy in tomcat-9!'
+            deploy adapters: [tomcat9(credentialsId: 'tomcatUPWD', path: '', url: 'http://localhost:9090')], contextPath: '/', onFailure: false, war: '**/*.war'
+        }
+    }
+    
+    
 }
