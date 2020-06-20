@@ -12,6 +12,7 @@
 	<groupId>com.mktg</groupId>
 	<artifactId>mktg</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>mktg</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
