@@ -16,7 +16,7 @@ pipeline {
 		stage('Checkout code') {
 	        steps {
 	        	echo 'CheckingOut'
-	            git credentialsId: 'repoPassword', url: 'https://github.com/itagikarvijay/demoapp.git'
+	            git credentialsId: 'repoPassword', url: 'https://github.com/itagikarvijay/react-app6.git'
 	        }
     	}
         stage('build') {
