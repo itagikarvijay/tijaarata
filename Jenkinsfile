@@ -40,7 +40,7 @@ pipeline {
     }
     post { 
         success {
-            echo 'I will always deploy in tomcat-9!'
+            echo 'I will always deploy in tomcat-9 server !'
             deploy adapters: [tomcat9(credentialsId: 'tomcatUPWD', path: '', url: 'http://localhost:9090')], contextPath: '/', onFailure: false, war: '**/*.jar'
         }
     }
