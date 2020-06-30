@@ -1,13 +1,10 @@
 spring:
+  profiles:    active:    - dev
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: update
     show-sql: true  
-  datasource:
-    username: root
-    password: syncomp
-    url: jdbc:mysql://localhost:3306/syndicate20
   mvc:
     view:
       prefix: /WEB-INF/view/
@@ -24,7 +21,7 @@ spring:
     timeout: 2m
   cache:
     cache-names:    - customersCache, productsCache
-    type: ehcache    ehcache:      config: classpath:masterCache.xml server:
+    type: ehcache    ehcache:      config: classpath:masterCache.xml    server:
     port: 8181
     servlet:
-      context-path: /       session:        timeout: 2m        cookie:          secure: true          http-only: true      
+      context-path: /       session:        timeout: 2m        cookie:          secure: true          http-only: true

@@ -24,12 +24,4 @@ public class Tijaarata extends SpringBootServletInitializer {
 		SpringApplication.run(Tijaarata.class, args);
 	}
 
-	@Bean
-	public CacheManager cacheManager() {
-		SimpleCacheManager cacheManager = new SimpleCacheManager();
-		cacheManager.setCaches(
-				Arrays.asList(new ConcurrentMapCache("customersCache"), new ConcurrentMapCache("productsCache")));
-		return cacheManager;
-	}
-
 }
