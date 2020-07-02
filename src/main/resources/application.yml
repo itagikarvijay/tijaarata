@@ -21,7 +21,8 @@ spring:
     timeout: 2m
   cache:
     cache-names:    - customersCache, productsCache
-    type: ehcache    ehcache:      config: classpath:masterCache.xml    server:
+    type: ehcache    ehcache:      config: classpath:masterCache.xml    
+  datasource:    initialization-mode: NEVERserver:
     port: 8181
     servlet:
       context-path: /       session:        timeout: 2m        cookie:          secure: true          http-only: true
