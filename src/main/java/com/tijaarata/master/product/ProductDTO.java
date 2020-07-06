@@ -1,10 +1,13 @@
 package com.tijaarata.master.product;
 
+import java.math.BigDecimal;
+
 public class ProductDTO {
 
 	private Integer id;
 	private Integer categoryId;
 	private String name;
+	private BigDecimal quantity = new BigDecimal(0.00);
 	private String description;
 	private String brand;
 	private Float rate;
@@ -95,6 +98,20 @@ public class ProductDTO {
 	 */
 	public void setRate(Float rate) {
 		this.rate = rate;
+	}
+
+	/**
+	 * @return the quantity
+	 */
+	public BigDecimal getQuantity() {
+		return quantity;
+	}
+
+	/**
+	 * @param quantity the quantity to set
+	 */
+	public void setQuantity(BigDecimal quantity) {
+		this.quantity = quantity;
 	}
 
 }
