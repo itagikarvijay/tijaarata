@@ -8,6 +8,7 @@ public class ProductDTO {
 	private Integer categoryId;
 	private String name;
 	private BigDecimal quantity = new BigDecimal(0.00);
+	private BigDecimal amount = new BigDecimal(0.00);
 	private String description;
 	private String brand;
 	private Float rate;
@@ -112,6 +113,20 @@ public class ProductDTO {
 	 */
 	public void setQuantity(BigDecimal quantity) {
 		this.quantity = quantity;
+	}
+
+	/**
+	 * @return the amount
+	 */
+	public BigDecimal getAmount() {
+		return amount;
+	}
+
+	/**
+	 * @param amount the amount to set
+	 */
+	public void setAmount(BigDecimal amount) {
+		this.amount = amount;
 	}
 
 }
